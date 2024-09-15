@@ -1,0 +1,38 @@
+/* DatePicker.css */
+
+/* Apply styles to calendar tiles for selected dates */
+.react-calendar__tile.selected-date {
+  border: 2px solid cornflowerblue !important;
+  background-color: #fff !important;
+  color: black !important;
+  border-radius: 6px;
+
+}
+/* To add a hover effect if needed */
+.react-calendar__tile.selected-date:hover {
+  background-color: lightcyan !important; /* Optional hover effect */
+}
+
+.react-calendar__tile--now {
+  background-color: transparent !important; /* Light blue background */
+  color: #1e40af   !important; /* Deep blue text */
+    /* small dot under the current date */
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 4px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+}
+
+
+.react-calendar__tile--now:hover { /* same as default bg hover color */
+    background-color: #f0f0f0 !important;
+}
